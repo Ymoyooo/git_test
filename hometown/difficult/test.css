@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ 
+body
+{
+    border-top: 2px red solid;
+    border-bottom: 2px red solid;
+}
+/*-------------------------head-------------------------*/
+#div-h
+{
+    position: relative;
+    margin-bottom: 1%;
+    overflow: hidden;
+    width: 100%; 
+}
+#div-h>a
+{
+    position: relative;
+    float: left; 
+    padding-left: 8%;  
+    margin-top: 12px;
+}
+#div-h li,a
+{
+    list-style: none;
+    text-decoration:none;
+    color: #ccc;
+}
+#div-h ul
+{ 
+    margin-top:30px;
+    margin-right: 20%;
+    float: right;
+    position: relative;  
+}
+#div-h ul li
+{ 
+    width: 100px;
+    font-size: 125%; 
+    float: left;
+    text-align:left;    
+}
+
+#img1{margin-top: 1%;margin-left: 11%;}
+
+#div-h a:hover{font-weight: bold;color: #777;font-weight: bold;}
+
+#li-h{color: #777;font-weight: bold;}
+/*-------------------------head-------------------------*/
+
+/*-------------------------body-------------------------*/
+#div-b
+{
+    position: relative; 
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    -webkit-background-size:100%;
+   -o-background-size: 100% 100%;
+   -moz-background-size: 100% 100%;
+   -webkit-background-size: 100% 100%;
+  width: 100%; 
+}
+#div-b>img
+{
+    width: 100%; 
+    height: 70%;
+    position: relative;
+    z-index: -2;
+    overflow: hidden;
+} 
+#p1
+{
+    position: absolute;
+    top:22%;
+    font-weight: bolder;
+    font-size: 250%;
+    color: #FFF;
+    left: 10%;
+    z-index: 2;
+}
+#p2
+{
+    position: absolute;
+    top:41%;
+    font-weight: normal;
+    font-size:110%;
+    width: 37%;
+    color: #FFF;
+    left: 10%;
+    z-index: 2;
+}
+#div-b-2
+{
+    position: absolute;
+    top:60%;
+    left: 10%;
+    width: 40%;
+    font-weight: normal;
+    font-size: 18px; 
+}
+#div-b-2 img
+{
+    z-index: 1;
+    width: 5%;
+}
+#div-b-2 a
+{
+    position: relative;
+    top: -5px;
+    z-index: 9;
+}
+#div-b-2 a:hover
+{
+    font-weight: bold;
+    color: red;
+    text-decoration:underline; 
+}
+
+.video 
+{
+    position:absolute;
+    float: right;
+    width: 20%;
+    top:42%;
+    right: 20%;
+    width: 26%;
+}
+
+.video img:hover
+{
+    -webkit-transform:scale(1.25,1.25);
+    -moz-transform:scale(1.25,1.25);
+    -transform:scale(1.25,1.25);
+    cursor: pointer;
+    transition: all 0.6s;  
+}
+.center
+{
+    text-align: center;
+}
+
+#div-b-3
+{ 
+    position: relative; 
+    width: 500px;
+    margin:0 auto;
+    letter-spacing: 20px;
+    font-weight: bold;
+    color: #777;
+    font-size: 150%;
+    height: 5%;
+}
+
+
+
+
+/*-------------------------body-------------------------*/
+/*-------------------------foot-------------------------*/
+
+#whole
+{
+    width: 95%; 
+    overflow: hidden;
+    margin: 0px  2%;
+}
+.picture img
+{
+    width: 100%;
+    height: 100%;
+}
+.picture
+{
+    position: relative; 
+    width: 23%;
+    height: 200px;
+    float: left;
+    margin: 1%;
+}
+.picture img{width: 100%;height: 100%;}
+.picture:hover .biankuang
+{
+    display: block;
+    cursor: pointer;
+}
+.biankuang
+{
+    top:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    float: left;
+    display: none; 
+}
+.biankuang2
+{
+    top:70px;
+    left: 15%;
+    position: absolute;
+    width: 65%;
+    height: 50px;
+    background-color: black;
+    border: 5px solid white;
+    float: left;
+}
+.biankuang2>p
+{
+    color:white;
+    margin-top: 15px;
+    text-align:center;
+}
+
+#btn
+{
+    position: fixed;
+    float: right;
+    right: 0;
+    width: auto;
+    height: 1px;
+    z-index: 5;
+    top:85%;
+}
+
+#btn>img
+{ 
+    width: 100%;
+    z-index: 6;
+}
+
+
+/*-------------------------foot-------------------------*/
+/*-------------------------end-------------------------*/
+#div-e
+{
+    position: relative;
+    display: inline-block; 
+    margin: 10px 0;
+}
+#div-e a
+{
+    color: #999;
+    text-decoration:underline;
+} 
+/*-------------------------end-------------------------*/
+@media screen and (max-width: 800px)
+{       
+    #div-h>ul{margin-top: 10px;}
+    .picture{width: 100%;height:200px;}
+    .biankuang{display: block;}
+
+    #div-b>img
+    {
+        width: 100%;
+        height: 800px;
+    }
+    #p1
+    {
+        top:80px;
+    }
+    #p2
+    {
+        top:180px;
+        width: 80%;
+    }
+    #div-b-2
+    {
+        top:300px;
+    }
+    #div-b-2 img
+    {
+        width: 30px;
+    }
+    .video
+    {
+        top:65%;
+        left: 40%;
+        width: 100px;
+    }
+}
