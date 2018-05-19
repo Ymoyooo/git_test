@@ -1,0 +1,210 @@
+object 类型的两种创建方式
+第二种称之为对象字面量表示法。属性之间用逗号相隔。最后不加符号。括号外加分号。 
+
+var person={}; 与 var person=New object();相同
+
+一般来说访问对象都是用点表示法,但是也可以使用方括号语法。
+如： person["name"]、person.name
+
+方括号表示法看似麻烦，但是可以用变量来访问属性！
+
+比如上面那个 person["name"] 我可以改成 var a="name" person[a];来访问你这个属性。
+
+构造Array的基本方式有两种。
+第一种是： var xxx=new Array();
+可以给构造函数传递数量，该数量会变成数组的length属性的值。
+new Array(20)就是一个长度为20的数组。
+也可以向数组里面传递数组项的值。
+newa Array("red","blue","yellow");
+
+如果传递的是非数值的参数，则会创建包含那个值的只有一项的数组。
+
+创建数组的第二种方式是使用数组字面量表示法。
+就是直接在定义的过程中吧内容标出来。。。
+
+如果定义一个a[6]但是a只有1项的话，那么数组长度会增加到7。
+数组的 length 属性很有特点——它不是只读的。因此，通过设置这个属性，可以从数组的末尾移除项或向数组中添加新项
+巧妙地增加最后一项a[a.length]=xxx;
+
+
+转换方法
+    所有对象都具有 toLocaleString()、 toString()和 valueOf()方法。
+    toString()方法会返回由数组中每个值的字符串形式拼接而成的一个以逗号分隔的字符串。
+    调用valueof()返回的还是数组。创建这个数组时对每一项会用toString()；
+    
+
+可以通过join()，来使用不同的分隔符来构建这个字符串。
+例如alert(color.join(",")); //red,green,blue;
+
+栈（LIFO）：
+   push()可以把东西加入到数组末尾，并返回修改后数组的长度。
+   pop()可以把栈顶元素移除，减小length。并返回移除掉的项。
+
+队列（LIFO）:  
+    有一个shift可以移除队头的元素。并返回移除的项。
+    color.unshift("red","green");是在color数组前端添加两个项。unshift可以增加任意个数的项。s
+
+重排序方法：
+reverse()和sort()。
+reverse作用是反转数组项的顺序。sort默认是按升序排列数组项。
+sort()会调用toString(）转型，再比较得到的字符串。因此"10"<"5"
+因此得外借助于函数，判断数值大小。
+var value = {1,3,2,5,4};
+function compare(value1,value2)
+{return value2-value;}
+value.sort(compare)
+
+concat()方法可以基于当前数组中的所有项创建一个新数组。
+colors.concat("yellow");
+
+slice()方法可以接受一到两个参数，即返回项的起始和结束位置（不包括结束位置的项）。在只有一个参数的时候，返回从该项到结尾的所有项。
+
+splice()方法。可以删除、插入、替换数组中的项。
+
+查找位置。
+indexOf()和lastIndexOf()前者查找距离第一项的距离，后者反之。
+
+迭代方法
+? every()：对数组中的每一项运行给定函数，如果该函数对每一项都返回 true，则返回 true。
+? filter()：对数组中的每一项运行给定函数，返回该函数会返回 true 的项组成的数组。
+? forEach()：对数组中的每一项运行给定函数。这个方法没有返回值。
+? map()：对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。
+? some()：对数组中的每一项运行给定函数，如果该函数对任一项返回 true，则返回 true。
+
+var number={1,2,3,4,5,6,7,8,9};
+
+var everyResult=number.every(  function(item,index,array){return(item>2)}    );
+
+像上面一样调用一个函数。
+
+Date
+ Date.now()可以返回现在的时间。
+ getDay()、getHours()、getDate();
+ 
+RegExp类型（正则表达式）
+var experssion=/pattern/flags;
+其中flags有g(global)、i(case-insensitive)、m(multiline);
+
+var pattern=/at/g;匹配字符串所有"at"的实例。
+var pattern=/[bc]at/i;不分大小写找bat/cat。
+var pattern=/.at/gi;不分大小写匹配所有以"at"结尾的所有字符。
+
+RegExp的实例都有下列属性。
+global、ignoreCase、lastIndex、multiline、source;
+
+exec()接受一个参数，即要应用模式的字符串，然后返回包含第一个匹配项的数组。在没有匹配项的情况下返回NULL；
+
+
+
+
+Function类型
+函数末尾有个分号.
+var sum=function(num1,num2){return num1+num2};
+
+如果前后定义了两个相同函数名的函数，那么相当于把第二个函数内容覆盖了第一个函数的内容。
+
+不建议使用sum=function(num1,num2){return num1+num2};
+
+要访问函数的指针而不执行函数的话，必须去掉函数名后面的括号
+
+
+函数内部属性
+arguments和this。其中arguments是一个类数组对象，保存着传入函数中的所有参数。
+
+this引用的是函数据以执行的环境对象。
+（当在网页的全局作用域中调用函数时，this对象引用的就是window）
+
+全局作用域中用this对象，引用的是全局对象window；
+对对象调用函数的话，this引用的是对象o；
+
+每个函数都有两个属性，length、prototypw。其中length属性表示函数希望接收的命名参数的个数。
+诸如toString()和 valueOf()等方法实际上都保存在 prototype 名下
+
+基本类型值不是对象，因为他们不应该有办法
+
+Boolean类型
+    BooleanBoolean 类型的实例重写了 valueOf()方法，返回基本类型值 true 或 false；重写了 toString()方法，返回字符串"true"和"false"。
+var falseObject = new Boolean(false);（对象来的）
+但是falseObject instanceof Boolean会返回true.
+
+toFixed()会按照制定的小数位返回数值的字符串表示。四舍五入制
+
+toExponential()，该方法返回以指数表示法（e表示法）表示的数值的字符串形式。与toFixed（）一样，toExponential()也接收一个参数，而且该参数同样也是指定输出结果中的小数位数。
+
+String类型
+String 对象的方法也可以在所有基本的字符串值中访问到。其中，继承的 valueOf()、toLocaleString()和 toString()方法，都返回对象所表示的基本字符串值。
+两个用于访问字符串中特定字符的方法是： charAt()charCodeAt()。
+charAt()方法以单字符字符串的形式返回给定位置的那个字符
+如果你想得到的不是字符而是字符编码，那么就要像下面这样使用 charCodeAt()
+concat()，用于将一或多个字符串拼接起来。但实践中使用更多的还是加号操作符（+）。
+有两个可以从字符串中查找子字符串的方法： indexOf()和 lastIndexOf()。这两个方法都可以接收可选的第二个参数，表示从字符串中的哪个位置开始搜索。
+trim()方法删除前置及后缀的所有空格，然后返回结果。
+
+字符串模式匹配的方法。
+第一个是match()，match()方法只接受一个参数，要么是一个正则表达式，要么是一个 RegExp 对象。会返回一个数组。
+第二个是search()，search()方法返回字符串中第一个匹配项的索引；如果没
+有找到匹配项，则返回-1。
+
+replace()方法。这个方法接受两个参数：第一个参数可以是一个 RegExp 对象或者一个字符串第二个参数可以是一个字符串或者一个函数。
+
+localeCompare()这个方法比较两个字符串；
+? 如果字符串在字母表中应该排在字符串参数之前，则返回一个负数（大多数情况下是-1，具体
+的值要视实现而定）；
+? 如果字符串等于字符串参数，则返回 0；
+? 如果字符串在字母表中应该排在字符串参数之后，则返回一个正数（大多数情况下是 1，具体的
+值同样要视实现而定）。
+
+过 eval()执行的代码被认为是包含该次调用的执行环境的一部分，
+因此被执行的代码具有与该执行环境相同的作用域链。
+eval("alert(msg)"); //"hello world"
+
+random()返回一个大于等于 0 小于 1 的一个随机数。
+
+Math.floor()方法，值 = Math.floor(Math.random() * 可能值的总数 + 第一个可能的值)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

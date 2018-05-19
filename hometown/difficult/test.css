@@ -9,50 +9,45 @@ body
     border-bottom: 2px red solid;
 }
 /*-------------------------head-------------------------*/
-#div-h
+.head
 {
     position: relative;
     margin-bottom: 1%;
     overflow: hidden;
-    width: 100%; 
 }
-#div-h>a
-{
-    position: relative;
-    float: left; 
-    padding-left: 8%;  
-    margin-top: 12px;
-}
-#div-h li,a
+
+.head li,a
 {
     list-style: none;
     text-decoration:none;
     color: #ccc;
 }
-#div-h ul
+.head ul
 { 
-    margin-top:30px;
-    margin-right: 20%;
-    float: right;
     position: relative;  
+    float: right;
+    margin-top:26px;
+    margin-right: 23%;
 }
-#div-h ul li
+.head ul li
 { 
-    width: 100px;
-    font-size: 125%; 
-    float: left;
-    text-align:left;    
+    display: inline-block; 
+    margin: 0 10px;
+    font-size: 20px;
+    text-align:right; 
+    font-size: 
 }
 
 #img1{margin-top: 1%;margin-left: 11%;}
 
-#div-h a:hover{font-weight: bold;color: #777;font-weight: bold;}
+.head a:hover{font-weight: bold;color: #777;font-weight: bold;}
 
-#li-h{color: #777;font-weight: bold;}
+.first-li{color: #777;font-weight: bold;}
 /*-------------------------head-------------------------*/
 
+
 /*-------------------------body-------------------------*/
-#div-b
+.mid-body
 {
     position: relative; 
     background-repeat: no-repeat; 
@@ -63,15 +58,14 @@ body
    -webkit-background-size: 100% 100%;
   width: 100%; 
 }
-#div-b>img
+.mid-body>img
 {
-    width: 100%; 
-    height: 70%;
+    width: 100%;
     position: relative;
     z-index: -2;
     overflow: hidden;
 } 
-#p1
+.p1
 {
     position: absolute;
     top:22%;
@@ -81,7 +75,7 @@ body
     left: 10%;
     z-index: 2;
 }
-#p2
+.p2
 {
     position: absolute;
     top:41%;
@@ -92,7 +86,7 @@ body
     left: 10%;
     z-index: 2;
 }
-#div-b-2
+.JoinUs
 {
     position: absolute;
     top:60%;
@@ -101,18 +95,18 @@ body
     font-weight: normal;
     font-size: 18px; 
 }
-#div-b-2 img
+.JoinUs img
 {
     z-index: 1;
     width: 5%;
 }
-#div-b-2 a
+.JoinUs a
 {
     position: relative;
     top: -5px;
     z-index: 9;
 }
-#div-b-2 a:hover
+.JoinUs a:hover
 {
     font-weight: bold;
     color: red;
@@ -142,8 +136,8 @@ body
     text-align: center;
 }
 
-#div-b-3
-{ 
+.MainProduct
+{
     position: relative; 
     width: 500px;
     margin:0 auto;
@@ -180,12 +174,12 @@ body
     margin: 1%;
 }
 .picture img{width: 100%;height: 100%;}
-.picture:hover .biankuang
+.picture:hover .frame
 {
     display: block;
     cursor: pointer;
 }
-.biankuang
+.frame
 {
     top:0;
     position: absolute;
@@ -196,7 +190,7 @@ body
     float: left;
     display: none; 
 }
-.biankuang2
+.frame2
 {
     top:70px;
     left: 15%;
@@ -207,14 +201,14 @@ body
     border: 5px solid white;
     float: left;
 }
-.biankuang2>p
+.frame2>p
 {
     color:white;
     margin-top: 15px;
     text-align:center;
 }
 
-#btn
+.btn
 {
     position: fixed;
     float: right;
@@ -225,7 +219,7 @@ body
     top:85%;
 }
 
-#btn>img
+.btn>img
 { 
     width: 100%;
     z-index: 6;
@@ -234,13 +228,13 @@ body
 
 /*-------------------------foot-------------------------*/
 /*-------------------------end-------------------------*/
-#div-e
+.ending
 {
     position: relative;
     display: inline-block; 
     margin: 10px 0;
 }
-#div-e a
+.ending a
 {
     color: #999;
     text-decoration:underline;
@@ -248,29 +242,28 @@ body
 /*-------------------------end-------------------------*/
 @media screen and (max-width: 800px)
 {       
-    #div-h>ul{margin-top: 10px;}
+    .head>ul{margin-top: 10px;}
     .picture{width: 100%;height:200px;}
-    .biankuang{display: block;}
-
-    #div-b>img
+    .frame{display: block;}   
+    .mid-body>img
     {
         width: 100%;
-        height: 800px;
+        height: 700px;
     }
-    #p1
+    .p1
     {
         top:80px;
     }
-    #p2
+    .p2
     {
         top:180px;
         width: 80%;
     }
-    #div-b-2
+    .JoinUs
     {
         top:300px;
     }
-    #div-b-2 img
+    .JoinUs img
     {
         width: 30px;
     }
@@ -279,5 +272,30 @@ body
         top:65%;
         left: 40%;
         width: 100px;
+    }
+}
+@media screen and (max-width:500px)
+{
+    *{padding: 0;margin:0;}
+    #img1{margin: 0 25%;}
+    .head>ul>li{font-size: 15px;margin: 0 5px;}
+    .head>ul{margin-top: 0;margin:0 10%;} 
+    #background{height: 555px;width: 100%;}
+    .video
+    {
+        left: 25%;
+        width: 60px;
+    }
+    .p1
+    {
+        top:10%;
+    }
+    .p2
+    {top:23%;}
+    .JoinUs
+    {
+        top:300px;
+        display: block;
+        bottom:10%;
     }
 }

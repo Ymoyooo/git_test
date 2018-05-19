@@ -1,0 +1,64 @@
+为了在网速比较慢的年代简化与服务器交换数据的流程，把验证表单留到本地来做，客户端语言应运而生。
+
+javascript是为了蹭java的热度才这样起名字的。
+
+为了建立标准来自各大主流公司的程序员制定了ECMA（ECMAscript）标准。
+
+JavaScript的实现有三个部分组成 1.核心（ECMAScript）2.文档对象模型 3.浏览器对象模型
+
+ECMAScript的宿主环境不只是Web浏览器。宿主环境还可以提供语言的拓展，如DOM 宿主环境除了WEB外还有Node、Adobe Flash
+
+文件对象（DOM）Document object model 是用于HTML的应用程序编程接口。
+
+通过 DOM 创建的这个表示文档的树形图，开发人员获得了控制页面内容和结构的主动权。借助DOM 提供的 API，开发人员可以轻松自如地删除、添加、替换或修改任何节点。
+
+为了防止netscape和微软在web开发领域上出现技术上的两强割据导致浏览器互不兼容的局面。负责制定web通信标准的W3C（world wide consortium）开始规划DOM
+
+第一代DOM：
+DOM核心规定的是如何如何映射基于 XML 的文档结构，以便简化对文档中任意部分的访问和操作。
+DOM HTML则在DOM核心的基础上加以拓展，添加了针对HTML对象和方法。
+
+第二级DOM：
+DOM2 级引入了下列新模块，也给出了众多新类型和新接口的定义。
+? DOM 视图（DOM Views）：定义了跟踪不同文档（例如，应用 CSS 之前和之后的文档）视图的
+接口；
+? DOM 事件（DOM Events）：定义了事件和事件处理的接口；
+? DOM 样式（DOM Style）：定义了基于 CSS 为元素应用样式的接口；
+? DOM 遍历和范围（DOM Traversal and Range）：定义了遍历和操作文档树的接口。
+
+浏览器对象模型（BOM，Browser Object Model）
+
+开发人员使用BOM可以控制浏览器显示的页面以外的部分
+
+BOM在HTML5之前都没有一个相关的标准。
+
+上讲， BOM 只处理浏览器窗口和框架；但人们习惯上也把所有针对浏览器的 JavaScript 扩展
+算作 BOM 的一部分。下面就是一些这样的扩展：
+? 弹出新浏览器窗口的功能；
+? 移动、缩放和关闭浏览器窗口的功能；
+? 提供浏览器详细信息的 navigator 对象；
+? 提供浏览器所加载页面的详细信息的 location 对象；
+? 提供用户显示器分辨率详细信息的 screen 对象；
+? 对 cookies 的支持；
+? 像 XMLHttpRequest 和 IE 的 ActiveXObject 这样的自定义对象。
+
+小结：
+JavaScript 是一种专为与网页交互而设计的脚本语言，由下列三个不同的部分组成：
+? ECMAScript，由 ECMA-262 定义，提供核心语言功能；
+? 文档对象模型（DOM），提供访问和操作网页内容的方法和接口；
+? 浏览器对象模型（BOM），提供与浏览器交互的方法和接口
+其中对ECMAScript5支持的成都越来越高，对DOM的支持相差比较多，BOM特性会因浏览器而异。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
