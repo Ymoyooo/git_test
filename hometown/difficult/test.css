@@ -313,3 +313,99 @@ body
         bottom:10%;
     }
 }
+@media screen and (min-width: 400px) and (max-device-width: 600px)
+{
+    .head img
+    {
+        position: relative;
+        left:15%;
+        height: 85px;
+        width: all;
+    }
+    .head>ul{margin-top: 0px;}
+    .head>ul>li{font-size: 35px;}
+    .head>ul>li:hover{color: red;}
+    .picture{width: 100%;height:200px;}
+    .frame{display: block;}   
+    .mid-body>img
+    {
+        width: 100%;
+        height: 700px;
+    }
+    .p1
+    {
+        top:80px;
+    }
+    .p2
+    {
+        top:180px;
+        width: 80%;
+    }
+    .JoinUs
+    {
+        top:300px;
+    }
+    .JoinUs img
+    {
+        width: 30px;
+    }
+    .video
+    {
+        top:65%;
+        left: 40%;
+        width: 80px;
+    }
+    .picture
+    {
+        height:400px;
+    }
+    .frame
+    {
+        width: 100%;
+        height: 100%; 
+    }
+    .frame2
+    {
+        top:33%;
+        height: 30%;
+        font-size: 2.5em;
+        padding: 20px 0 0 0 ;
+        left: 8.5%;
+    }
+    .p1
+    {
+        font-size: 5em;
+    }
+    .p2
+    {
+        font-size: 2.5em;
+    }
+    .JoinUs
+    {
+        margin-top: 17%;
+    }
+    .JoinUs
+    {
+        font-size: 1.5em;
+    }
+    #background
+    {
+        height: 900px;
+    }
+    .video
+    {
+        left: 35%;
+        margin-top: 5%;
+    }
+    .video #example_video1
+
+    { left: -200px;
+        top:-180px;
+        width: 600px;
+        height: 400px;
+    }
+    .MainProduct
+    {
+        font-size: 4.5em;
+    }
+}
